@@ -7,7 +7,7 @@ const testimonials = [
     type: "Diabetes Patient",
   },
   {
-    image: "images/image.png",
+    image: "images/checkup.png",
     quote: "“The best way to predict the future is to create it.”",
     name: "Ms. Johnson",
     type: "Heart Patient",
