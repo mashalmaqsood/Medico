@@ -1,0 +1,46 @@
+<header>
+    <nav class="nav">
+      <a aria-label="Medico" class="nav__brand" href="/">
+        <img
+          class="nav__logo"
+          src="images/logo.png"
+          width="20px"
+          height="18px"
+        />
+        Medico
+      </a>
+      <img class="icon nav__toggler" src="images/menu.svg" id="nav-toggler" />
+      <ul class="list nav__list" id="nav-list">
+        <li class="nav__item"><a href="#">Home</a></li>
+        <li class="nav__item"><a href="#about-us">About</a></li>
+        <li class="nav__item"><a href="#services">Services</a></li>
+        <li class="nav__item"><a href="#doctors">Doctor</a></li>
+        <li class="nav__item"><a href="#health-care">Health</a></li>
+        <li class="nav__item"><a href="#checkup-plans">Checkup</a></li>
+        <li class="nav__item"><a href="#contact-page">Contact</a></li>
+        <button class="btn" id="appointment-btn">Appointment</button>
+      </ul>
+    </nav>
+
+    <!-- appointment form  -->
+    <div id="appointment-form" class="form-container hidden">
+      <button id="close-button">x</button>
+      <div class="input-group">
+        <input type="text" placeholder="Name" class="input" />
+      </div>
+      <div class="input-group">
+        <input type="text" placeholder="Phone" class="input" />
+      </div>
+      <div class="input-group">
+        <input type="text" placeholder="Email" class="input" />
+      </div>
+      <div class="input-group">
+        <input type="" placeholder="Select Appointment Type" class="input" />
+        <div class="dropdown-icon">
+          <img src="images/dropdown.svg" />
+        </div>
+      </div>
+      <textarea class="input input--message">Message</textarea>
+      <button id="appointment-btn" class="btn form-btn">Submit Now</button>
+    </div>
+  </header>
