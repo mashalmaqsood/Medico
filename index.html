@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="Topmenu">
-      <div class="Topmenu__info1">
-        <span class="Topmenu__location">
+    <!-- Top menu  -->
+    <div class="topmenu">
+      <div class="topmenu__info">
+        <span class="topmenu__location">
           <img
             src="images/Vector-4.svg"
             width="22px"
@@ -18,7 +19,7 @@
           />
           90919 Madie run Apt. 790
         </span>
-        <span class="Topmenu__email">
+        <span class="topmenu__email">
           <img
             class="icon-email"
             src="images/vector-7.svg"
@@ -29,101 +30,483 @@
           medico@health.care
         </span>
       </div>
-      <span class="Topmenu__contact">
+      <span class="topmenu__contact">
         <img
           src="images/vector-8.svg"
           width="22px"
           height="18px"
           alt="location icon"
         />
-        Connect on Whatsapp</span
-      >
+        Connect on Whatsapp
+      </span>
     </div>
+
+    <!-- Navbar  -->
     <header>
       <nav class="nav">
-        <div class="nav__container">
-          <a class="nav__brand" href="/">
-            <img
-              class="nav__logo"
-              src="images/logo.png"
-              width="20px"
-              height="18px"
-            />
-            Medico
-          </a>
-          <ul class="list nav__list">
-            <li class="nav__item"><a href="#">Home</a></li>
-            <li class="nav__item"><a href="#">About</a></li>
-            <li class="nav__item"><a href="#">Services</a></li>
-            <li class="nav__item"><a href="#">Doctor</a></li>
-            <li class="nav__item"><a href="#">Health</a></li>
-            <li class="nav__item"><a href="#">Checkup</a></li>
-            <li class="nav__item"><a href="#">Contact</a></li
-            </ul>
-        </div>
-        <button class="btn">Appointment</button>
+        <a aria-label="Medico" class="nav__brand" href="/">
+          <img
+            class="nav__logo"
+            src="images/logo.png"
+            width="20px"
+            height="18px"
+          />
+          Medico
+        </a>
+        <img class="icon nav__toggler" src="images/menu.svg" id="nav-toggler" />
+        <ul class="list nav__list" id="nav-list">
+          <li class="nav__item"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="#about-us">About</a></li>
+          <li class="nav__item"><a href="#services">Services</a></li>
+          <li class="nav__item"><a href="#doctors">Doctor</a></li>
+          <li class="nav__item"><a href="#health-care">Health</a></li>
+          <li class="nav__item"><a href="#checkup-plans">Checkup</a></li>
+          <li class="nav__item"><a href="#contact-page">Contact</a></li>
+          <button class="btn" id="appointment-btn">Appointment</button>
+        </ul>
       </nav>
-    </header>
-    </div>
-    <section class="Herosection grid grid--1x2">
-        <div class="Herosection__image">
-            <div class="image-text">
-                <img class="Herosection__icon"
-                src="images/image 38.png" width="20px" height="20px"/>
-                <span class="Herosection__text">More than 10K
-                    Patients treated!</span>
-            </div>
-            <img 
-            src="images/image.png" alt="A doctor" width="500px" height="500px"/>
+
+      <!-- appointment form  -->
+      <div id="appointment-form" class="form-container hidden">
+        <button id="close-button">x</button>
+        <div class="input-group">
+          <input type="text" placeholder="Name" class="input" />
         </div>
-        <div class="Herosection__content">
-            <h3 class="Herosection__tag">Welcome to Medico Healthcare</h3>
-            <h1 class="Herosection__heading">Your Journey to <br/>
-                Better Health <br/>
-                Starts Here</h1>
-            <button class="btn">Discover More</button>
-            </div>
+        <div class="input-group">
+          <input type="text" placeholder="Phone" class="input" />
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Email" class="input" />
+        </div>
+        <div class="input-group">
+          <input type="" placeholder="Select Appointment Type" class="input" />
+          <div class="dropdown-icon">
+            <img src="images/dropdown.svg" />
+          </div>
+        </div>
+        <textarea class="input input--message">Message</textarea>
+        <button id="appointment-btn" class="btn form-btn">Submit Now</button>
+      </div>
+    </header>
+
+    <!-- Hero section  -->
+    <section class="herosection grid">
+      <div class="herosection__image__container">
+        <div class="image-text">
+          <img
+            class="herosection__icon"
+            src="images/image 38.png"
+            width="20px"
+            height="20px"
+          />
+          <span class="herosection__text">More than 10K Patients treated!</span>
+        </div>
+        <img
+          class="herosection__image"
+          src="images/image.png"
+          alt="A doctor"
+          width="280px"
+          height="300px"
+        />
+      </div>
+      <div class="herosection__content">
+        <h3 class="herosection__tag">Welcome to Medico Healthcare</h3>
+        <h1 class="herosection__heading">
+          Your Journey to <br />
+          Better Health <br />
+          Starts Here
+        </h1>
+        <a href="https://medico.org/" target="_blank">
+          <button class="btn">Discover More</button>
+        </a>
+      </div>
     </section>
-    <section class="Catgory-container">
-    <h2 class="Catgory-container__heading">Dedicated to provide best treatment</h2>
-    <p class="Catgory-container__text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring <br/> which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which <br/> was created for the bliss of souls like mine.</p>
-    <div class="Categoryservices">
-      <div class="category__image">
-        <img src="images/image 41.png" alt="" />
-        <div class="Category__info">
-          <span>
-            For Your Health
+
+    <!-- Category section  -->
+    <section id="doctors" class="catgory-container">
+      <h2 class="catgory-container__heading">
+        Dedicated to provide best treatment
+      </h2>
+      <p class="catgory-container__text">
+        A wonderful serenity has taken possession of my entire soul, like these
+        sweet mornings of spring which I enjoy with my whole heart. I am alone,
+        and feel the charm of existence in this spot, which was created for the
+        bliss of souls like mine.
+      </p>
+      <div class="categoryservices">
+        <div class="category__container">
+          <img
+            class="category__image"
+            src="images/image 41.png"
+            alt="Pediatrician"
+          />
+          <div class="category__info">
+            <span class="category__info__text"> For Your Health </span>
             <h2>Pediatrician</h2>
-          </span>
+          </div>
         </div>
-      </div>
-      <div class="category__image">
-        <img src="images/image 42.png" alt="" />
-        <div class="Category__info">
-          <span>
-            For Your Health
+        <div class="category__container">
+          <img
+            class="category__image"
+            src="images/image 42.png"
+            alt="Cardiologist"
+          />
+          <div class="category__info">
+            <span class="category__info__text"> For Your Health </span>
             <h2>Cardiologist</h2>
-          </span>
+          </div>
         </div>
-      </div>
-      <div class="category__image">
-        <img src="images/image 43.png" alt="" />
-        <div class="Category__info">
-          <span>
-            For Your Health
+        <div class="category__container">
+          <img
+            class="category__image"
+            src="images/image 43.png"
+            alt="Dermatologist"
+          />
+          <div class="category__info">
+            <span class="category__info__text"> For Your Health </span>
             <h2>Dermatologist</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speciality section  -->
+    <section id="services" class="SpecialityServices">
+      <header class="SpecialityServices__header">
+        <span class="SpecialityServices__tag"> SERVICES & TREATMENTS</span>
+        <h2 class="SpecialityServices__heading">
+          More than 40 speciality <br />
+          and health care services
+        </h2>
+        <button class="btn SpecialityServices__btn">See All Services</button>
+      </header>
+      <div class="grid SpecialityServices__categories">
+        <div class="SpecialityServices__category">
+          <div class="grid SpecialityServices__category__container">
+            <img src="images/category1.png" width="50px" />
+            <div class="category__content">
+              <h1 class="category__content__heading">Mental Health Service</h1>
+              <p class="category__content__text">
+                The service provides immediate medical care to patients with
+                acute illnesses or injuries that require immediate attention
+              </p>
+            </div>
+          </div>
+          <img class="category__button" src="images/Vector-5.svg" />
+        </div>
+        <div class="SpecialityServices__category">
+          <div class="grid SpecialityServices__category__container">
+            <img src="images/category2.png" width="50px" />
+            <div class="category__content">
+              <h1 class="category__content__heading">Eye Diseasses Service</h1>
+              <p class="category__content__text">
+                The service provides immediate medical care to patients with
+                acute illnesses or injuries that require immediate attention
+              </p>
+            </div>
+          </div>
+          <img class="category__button" src="images/Vector-5.svg" />
+        </div>
+        <div class="SpecialityServices__category">
+          <div class="grid SpecialityServices__category__container">
+            <img src="images/category3.png" width="50px" />
+            <div class="category__content">
+              <h1 class="category__content__heading">Vaccination Service</h1>
+              <p class="category__content__text">
+                The service provides immediate medical care to patients with
+                acute illnesses or injuries that require immediate attention
+              </p>
+            </div>
+          </div>
+          <img class="category__button" src="images/Vector-5.svg" />
+        </div>
+        <div class="SpecialityServices__category">
+          <div class="grid SpecialityServices__category__container">
+            <img src="images/category4.png" width="50px" />
+            <div class="category__content">
+              <h1 class="category__content__heading">Cardiology Service</h1>
+              <p class="category__content__text">
+                The service provides immediate medical care to patients with
+                acute illnesses or injuries that require immediate attention
+              </p>
+            </div>
+          </div>
+          <img class="category__button" src="images/Vector-5.svg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- benefits section  -->
+    <section id="about-us" class="benefitsSection">
+      <div class="benefitsSection__container">
+        <div class="benefitsSection__image">
+          <img
+            src="images/doctor.png"
+            alt="A doctor"
+          />
+        </div>
+        <div class="benefitsSection__content">
+          <h3 class="benefitsSection__heading">Why Choose Us?</h3>
+          <ul class="benefitsSection__list">
+            <li class="benefitsSection__listitem">
+              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+              Safety First Quality Must
+            </li>
+            <li class="benefitsSection__listitem">
+              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+              Patient-Centric Approach
+            </li>
+            <li class="benefitsSection__listitem">
+              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+              Focused Leadership
+            </li>
+            <li class="benefitsSection__listitem">
+              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+              Cutting-Edge Technology
+            </li>
+            <li class="benefitsSection__listitem">
+              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+              Transparent Pricing
+            </li>
+            <li class="benefitsSection__listitem">
+              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+              Coordinated Care
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="benefitsSecion__contentcontainer">
+        <h3 class="benefitsSection__heading">Wellness, Compassion, Quality</h3>
+        <p class="benefitsSection__text">
+          They live in Bookmarks grove right at the coast of the Semantics, a
+          large language ocean. A small river named Duden flows by their place
+          and supplies it.
+        </p>
+        <button class="btn benefitsSection__button">Take An Appointment</button>
+      </div>
+    </section>
+
+    <!-- checkup plans  -->
+    <section id="checkup-plans" class="checkup-plans">
+      <header>
+        <div class="checkup-plans__container1">
+          <h1 class="checkup-plans__heading">Health Checkup Plans</h1>
+          <p class="checkup-plans__text">
+            They live in Bookmarks grove right at the coast of the <br/>
+            Semantics, a large language ocean named flows.
+          </p>
+          <div class="checkup-plans__categories">
+            <button id="women-health-btn" class="btn">Women Health</button>
+            <button id="cancer-screening-btn" class="btn btn--white">Cancer Screening</button>
+            <button id="kids-vaccine-btn"
+            class="btn btn--white">Kids Vaccines</button>
+          </div>
+        </div>
+      </header>
+      <div class="checkup-plans__container2 grid">
+        <div class="checkup-plans__content">
+          <img
+            class="checkup-plans__icon"
+            src="images/healthcare.png"
+            width="50px"
+          />
+          <h1 id="checkup-plans__heading2" class="checkup-plans__heading2">Women Health Checkup</h1>
+          <p id="checkup-plans__text2"
+          class="checkup-plans__text2">
+            A wonderful serenity has taken possession of my entire soul,
+            like these sweet mornings of spring.
+          </p>
+          <ul class="checkup-plans__list">
+            <li id="list-1-text"
+            class="checkup-plans__listitem">
+              <img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+              Complete Blood Count with ESR
+            </li>
+            <li id="list-2-text"
+              class="checkup-plans__listitem">
+              <img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+              Lipid Profile, Live Profile, kidney Profile
+            </li>
+            <li
+             id="list-3-text"
+             class="checkup-plans__listitem">
+              <img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+              USG Abdomen with Pelvis, Mammography
+            </li>
+          </ul>
+          <button class="btn benefitsSection__button">
+            Take An Appointment
+          </button>
+        </div>
+        <div class="checkup-plans__image">
+          <img
+            src="images/checkup.png"
+            alt="A doctor"
+            width="300px"
+            height="350px"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonials  -->
+    <section id="health-care">
+      <div class="grid testimonials">
+        <div class="testimonial__image-container">
+          <img
+            id="testimonial-image"
+            src="images/testimonial.png"
+            alt="A happy,smiling patient"
+            width="400px"
+            height="300px"
+          />
+        </div>
+        <div class="testimonial__container">
+          <div class="testimonials__quotes">
+            <img
+              class="testimonials__quotes__image"
+              src="images/quotes.png"
+              width="50px"
+              height="50px"
+            />
+            <div class="testimonials__rating">
+              <img
+                class="testimonials__rating__image"
+                src="images/rating.png"
+                width="100px"
+              />
+            </div>
+          </div>
+          <span class="testimonials__heading">
+            <h3 id="testimonial-quote" class="testimonial__container__text">
+              “A wonderful serenity has taken possession of my entire soul, like
+              these sweet mornings of spring which I enjoy”.
+            </h3>
+          </span>
+          <div class="testimonials__patientinfo">
+            <p class="patientinfo__name" id="patient-name">Mr. Williams</p>
+            <p class="patientinfo__type" id="patient-type">Diabetes Patient</p>
+          </div>
+        </div>
+        <button class="arrow-btn" id="prev-btn">
+          <img src="images/leftarrow.svg" alt="Previous" />
+        </button>
+        <button class="arrow-btn right-arrow" id="next-btn">
+          <img src="images/rightarrow.svg" alt="Next" />
+        </button>
+      </div>
+    </section>
+
+    <!-- contact  -->
+    <section id="contact-page" class="contact-container grid">
+      <div class="contact-container__content">
+        <span class="contact-container__tag">APPOINTMENT</span>
+        <h3 class="contact-container__heading">
+          Get in touch to book <br />
+          your first appointment
+        </h3>
+        <p class="contact-container__text">
+          Far far away, behind the word mountains, far <br />
+          from the countries Vokalia and Consonantia.
+        </p>
+        <div class="contact-container__info">
+          <span>
+            <img class="contact-container__image" src="images/vector-7.svg" />
+            (123) 456-7890
+          </span>
+          <span>
+            <img class="contact-container__image" src="images/vector-9.svg" />
+            medico@health.care
           </span>
         </div>
       </div>
-    </div>
-</section>
-<section class="SpecialityServices">
-    <header class="SpecialityServices__header">
-     <span> SERVICES & TREATMENTS</span>
-     <h2>More than 40 speciality and health care services</h2>
-     <button class="btn specialbtn">Discover More</button>
-    </header>
-    
-</section>
+      <div class="contact-container__form">
+        <div class="input-group">
+          <input type="text" placeholder="Name" class="input" />
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Phone" class="input" />
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Email" class="input" />
+        </div>
+        <div class="input-group">
+          <input type="" placeholder="Select Appointment Type" class="input" />
+          <div class="dropdown-icon">
+            <img src="images/dropdown.svg" />
+          </div>
+        </div>
+        <textarea class="input input--message">Message</textarea>
+        <button class="btn form-btn">Submit Now</button>
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="footer">
+      <div class="container footer-sections">
+        <div class="footer-section1">
+          <div class="footer-section1__heading">
+            <img
+              class="footer-section1__icon"
+              src="images/healthcare.png"
+              width="20px"
+              height="20px"
+            />
+            <span>Medico</span>
+          </div>
+          <div class="footer__buttton-container">
+            <button class="btn--footer">
+              <img src="images/appointment.svg" width="12px" />
+              Take An Appointment
+            </button>
+            <button class="btn--footer">
+              <img src="images/vector-8.svg" width="12px" />
+              Connect on Whatsapp
+            </button>
+          </div>
+        </div>
+        <ul class="footer__section">
+          <li class="footer__section__heading">SERVICES</li>
+          <li class="footer__section__listitem">Pathology</li>
+          <li class="footer__section__listitem">Ambulance</li>
+          <li class="footer__section__listitem">Radiology</li>
+          <li class="footer__section__listitem">Pharmacy</li>
+        </ul>
+        <ul class="footer__section">
+          <li class="footer__section__heading">HEALTH CHECKUP</li>
+          <li class="footer__section__listitem">Woman Health</li>
+          <li class="footer__section__listitem">Cancer Screening</li>
+          <li class="footer__section__listitem">Cardiac Health</li>
+          <li class="footer__section__listitem">MRI Checkup</li>
+        </ul>
+        <ul class="footer__section">
+          <li class="footer__section__heading">DEPARTMENTS</li>
+          <li class="footer__section__listitem">General</li>
+          <li class="footer__section__listitem">Dermatology</li>
+          <li class="footer__section__listitem">Cardiology</li>
+          <li class="footer__section__listitem">Cancer</li>
+        </ul>
+        <ul class="footer__section">
+          <li class="footer__section__heading">QUICK LINKS</li>
+          <li class="footer__section__listitem">License</li>
+          <li class="footer__section__listitem">Changelog</li>
+        </ul>
+        <div class="footer__icons">
+          <a href="https://www.facebook.com/algolix/" target="_blank">
+            <img class="footer__icon" src="images/facebook.svg" width="20px">
+          </a>
+          <a href="https://x.com/elonmusk" target="_blank">
+            <img class="footer__icon" src="images/twitter.svg" width="20px">
+          </a>
+          <a href="https://www.pinterest.com/pin/633387442784344/" target="_blank">
+              <img class="footer__icon" src="images/pinterest.svg" width="20px">
+          </a>
+          <a href="https://www.instagram.com/explore/locations/106720507792523/algolix-technologies/" target="_blank">
+          <img class="footer__icon" src="images/instagram.svg" width="20px" />
+           </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
