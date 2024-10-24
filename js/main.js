@@ -1,19 +1,19 @@
 const testimonials = [
   {
-    image: "images/testimonial.png",
+    image: "images/testimonial.svg",
     quote:
       "“A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy.”",
     name: "Mr. Williams",
     type: "Diabetes Patient",
   },
   {
-    image: "images/checkup.png",
+    image: "images/checkup.svg",
     quote: "“The best way to predict the future is to create it.”",
     name: "Ms. Johnson",
     type: "Heart Patient",
   },
   {
-    image: "images/doctor.png",
+    image: "images/benefits.svg",
     quote: "“In the middle of every difficulty lies opportunity.”",
     name: "Dr. Smith",
     type: "General Practitioner",
@@ -65,12 +65,12 @@ const womenHealthPlan = {
   description:
     "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring.",
   ul: {
-    li1: `<img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+    li1: `<img class="checkup-plans-list__icon" src="images/tick.svg" />
   Complete Blood Count with ESR`,
-    li2: `<img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+    li2: `<img class="checkup-plans-list__icon" src="images/tick.svg" />
   Pap Smear with HPV DNA Test`,
     li3: `
-  <img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+  <img class="checkup-plans-list__icon" src="images/tick.svg" />
   USG Abdomen with Pelvis, Mammography`,
   },
 };
@@ -80,12 +80,12 @@ const cancerCheckupPlan = {
   description:
     "Cancer screening checkup involves a series of tests designed to detect cancer at its early stages, even before symptoms appear. Regular screening increases the chances of successful treatment and better outcomes.",
   ul: {
-    li1: `<img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+    li1: `<img class="checkup-plans-list__icon" src="images/tick.svg" />
   Mammography with Breast Ultrasound`,
-    li2: `<img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+    li2: `<img class="checkup-plans-list__icon" src="images/tick.svg" />
   Lipid Profile, Live Profile, kidney Profile`,
     li3: `
-  <img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+  <img class="checkup-plans-list__icon" src="images/tick.svg" />
   Colonoscopy with Fecal Occult Blood Test (FOBT)`,
   },
 };
@@ -95,12 +95,12 @@ const kidsVaccinePlan = {
   description:
     "A kids vaccines checkup plan ensures that children receive timely immunizations to protect them from serious diseases like measles, polio, and whooping cough. Regular vaccination helps build immunity and prevents future health risks.",
   ul: {
-    li1: `<img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+    li1: `<img class="checkup-plans-list__icon" src="images/tick.svg" />
   BCG Vaccine for Tuberculosis`,
-    li2: `<img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+    li2: `<img class="checkup-plans-list__icon" src="images/tick.svg" />
   DTP Vaccine (Diphtheria, Tetanus, Pertussis)`,
     li3: `
-  <img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+  <img class="checkup-plans-list__icon" src="images/tick.svg" />
   MMR Vaccine (Measles, Mumps, Rubella)`,
   },
 };

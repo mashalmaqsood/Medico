@@ -5,24 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Your trusted healthcare provider offering a wide range of services, including general checkups, specialized treatments, and wellness programs for all ages."
+      content="Your trusted healthcare provider offering a wide range of services, including general checkups, specialized treatments,
+       and wellness programs for all ages."
+    />
+    <meta name="author" content="Medico" />
+    <meta
+      name="keywords"
+      content="healthcare, services, checkups, treatments"
     />
     <meta property="og:title" content="Medico..." />
     <meta
       property="og:description"
-      content="We provide comprehensive healthcare services, from routine checkups to advanced medical treatments. Our experienced team is dedicated to your health and well-being."
+      content="We provide comprehensive healthcare services, from routine checkups to advanced medical treatments.
+       Our experienced team is dedicated to your health and well-being."
     />
     <meta property="og:type" content="website" />
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <!-- Top menu  -->
     <div class="topmenu">
       <div class="topmenu__info">
         <span class="topmenu__location">
           <img
-            src="images/Vector-4.svg"
+            src="images/location.svg"
             width="22px"
             height="18px"
             alt="location icon"
@@ -32,7 +39,7 @@
         <span class="topmenu__email">
           <img
             class="icon-email"
-            src="images/vector-7.svg"
+            src="images/email.svg"
             width="22px"
             height="22px"
             alt="email icon"
@@ -42,7 +49,7 @@
       </div>
       <span class="topmenu__contact">
         <img
-          src="images/vector-8.svg"
+          src="images/whatsapp.svg"
           width="22px"
           height="18px"
           alt="Whatsapp icon"
@@ -101,11 +108,11 @@
 
     <!-- Hero section  -->
     <section class="herosection grid">
-      <div class="herosection__image__container">
+      <div class="herosection__image__container" data-aos="fade-right">
         <div class="image-text">
           <img
             class="herosection__icon"
-            src="images/image 38.png"
+            src="images/heroicon.svg"
             width="20px"
             height="20px"
           />
@@ -113,13 +120,13 @@
         </div>
         <img
           class="herosection__image"
-          src="images/image.png"
+          src="images/heroimage.svg"
           alt="A doctor"
           width="280px"
           height="300px"
         />
       </div>
-      <div class="herosection__content">
+      <div class="herosection__content" data-aos="fade-left">
         <h3 class="herosection__tag">Welcome to Medico Healthcare</h3>
         <h1 class="herosection__heading">
           Your Journey to <br />
@@ -132,22 +139,23 @@
       </div>
     </section>
 
-    <!-- Category section  -->
+    <!-- category section  -->
     <section id="doctors" class="catgory-container">
       <h2 class="catgory-container__heading">
         Dedicated to provide best treatment.
       </h2>
       <p class="catgory-container__text">
         A wonderful serenity has taken possession of my entire soul, like these
-        sweet mornings of spring which I enjoy with my whole heart. I am alone,
-        and feel the charm of existence in this spot, which was created for the
-        bliss of souls like mine.
+        sweet mornings of spring <br />
+        which I enjoy with my whole heart. I am alone, and feel the charm of
+        existence in this spot, which <br />
+        was created for the bliss of souls like mine.
       </p>
-      <div class="categoryservices">
+      <div class="categoryservices" data-aos="fade-left">
         <div class="category__container">
           <img
             class="category__image"
-            src="images/image 41.png"
+            src="images/pediatrician.svg"
             alt="Pediatrician"
           />
           <div class="category__info">
@@ -158,7 +166,7 @@
         <div class="category__container">
           <img
             class="category__image"
-            src="images/image 42.png"
+            src="images/cardiologist.svg"
             alt="Cardiologist"
           />
           <div class="category__info">
@@ -169,7 +177,7 @@
         <div class="category__container">
           <img
             class="category__image"
-            src="images/image 43.png"
+            src="images/dermatologist.svg"
             alt="Dermatologist"
           />
           <div class="category__info">
@@ -180,7 +188,7 @@
       </div>
     </section>
 
-    <!-- Speciality section  -->
+    <!-- speciality section  -->
     <section id="services" class="SpecialityServices">
       <header class="SpecialityServices__header">
         <span class="SpecialityServices__tag"> SERVICES & TREATMENTS</span>
@@ -190,10 +198,10 @@
         </h2>
         <button class="btn SpecialityServices__btn">See All Services</button>
       </header>
-      <div class="grid SpecialityServices__categories">
+      <div class="grid SpecialityServices__categories" data-aos="fade-right">
         <div class="SpecialityServices__category">
           <div class="grid SpecialityServices__category__container">
-            <img src="images/category1.png" width="50px" />
+            <img src="images/mentalservice.svg" width="50px" />
             <div class="category__content">
               <h1 class="category__content__heading">Mental Health Service</h1>
               <p class="category__content__text">
@@ -202,11 +210,11 @@
               </p>
             </div>
           </div>
-          <img class="category__button" src="images/Vector-5.svg" />
+          <img class="category__button" src="images/rightbutton.svg" />
         </div>
         <div class="SpecialityServices__category">
           <div class="grid SpecialityServices__category__container">
-            <img src="images/category2.png" width="50px" />
+            <img src="images/eye.svg" width="50px" />
             <div class="category__content">
               <h1 class="category__content__heading">Eye Diseasses Service</h1>
               <p class="category__content__text">
@@ -215,11 +223,11 @@
               </p>
             </div>
           </div>
-          <img class="category__button" src="images/Vector-5.svg" />
+          <img class="category__button" src="images/rightbutton.svg" />
         </div>
         <div class="SpecialityServices__category">
           <div class="grid SpecialityServices__category__container">
-            <img src="images/category3.png" width="50px" />
+            <img src="images/vaccination.svg" width="50px" />
             <div class="category__content">
               <h1 class="category__content__heading">Vaccination Service</h1>
               <p class="category__content__text">
@@ -228,11 +236,11 @@
               </p>
             </div>
           </div>
-          <img class="category__button" src="images/Vector-5.svg" />
+          <img class="category__button" src="images/rightbutton.svg" />
         </div>
         <div class="SpecialityServices__category">
           <div class="grid SpecialityServices__category__container">
-            <img src="images/category4.png" width="50px" />
+            <img src="images/heart.svg" width="50px" />
             <div class="category__content">
               <h1 class="category__content__heading">Cardiology Service</h1>
               <p class="category__content__text">
@@ -241,59 +249,61 @@
               </p>
             </div>
           </div>
-          <img class="category__button" src="images/Vector-5.svg" />
+          <img class="category__button" src="images/rightbutton.svg" />
         </div>
       </div>
     </section>
 
     <!-- benefits section  -->
-    <section id="about-us" class="benefitsSection">
-      <div class="benefitsSection__container">
-        <div class="benefitsSection__image">
-          <img src="images/doctor.png" alt="A doctor" />
+    <section id="about-us" class="benefits-section">
+      <div class="benefits-section__container">
+        <div class="benefits-section__image" data-aos="fade-right">
+          <img src="images/benefits.svg" alt="A doctor" />
         </div>
-        <div class="benefitsSection__content">
-          <h3 class="benefitsSection__heading">Why Choose Us?</h3>
-          <ul class="benefitsSection__list">
-            <li class="benefitsSection__listitem">
-              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+        <div class="benefits-section__content" data-aos="fade-left">
+          <h3 class="benefits-section__heading">Why Choose Us?</h3>
+          <ul class="benefits-section__list">
+            <li class="benefits-section__listitem">
+              <img class="benefits-section__icon" src="images/tick.svg" />
               Safety First Quality Must
             </li>
-            <li class="benefitsSection__listitem">
-              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+            <li class="benefits-section__listitem">
+              <img class="benefits-section__icon" src="images/tick.svg" />
               Patient-Centric Approach
             </li>
-            <li class="benefitsSection__listitem">
-              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+            <li class="benefits-section__listitem">
+              <img class="benefits-section__icon" src="images/tick.svg" />
               Focused Leadership
             </li>
-            <li class="benefitsSection__listitem">
-              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+            <li class="benefits-section__listitem">
+              <img class="benefits-section__icon" src="images/tick.svg" />
               Cutting-Edge Technology
             </li>
-            <li class="benefitsSection__listitem">
-              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+            <li class="benefits-section__listitem">
+              <img class="benefits-section__icon" src="images/tick.svg" />
               Transparent Pricing
             </li>
-            <li class="benefitsSection__listitem">
-              <img class="benefitsSection__icon" src="images/Vector-6.svg" />
+            <li class="benefits-section__listitem">
+              <img class="benefits-section__icon" src="images/tick.svg" />
               Coordinated Care
             </li>
           </ul>
         </div>
       </div>
       <div class="benefitsSecion__contentcontainer">
-        <h3 class="benefitsSection__heading">Wellness, Compassion, Quality</h3>
-        <p class="benefitsSection__text">
+        <h3 class="benefits-section__heading">Wellness, Compassion, Quality</h3>
+        <p class="benefits-section__text">
           They live in Bookmarks grove right at the coast of the Semantics, a
-          large language ocean. A small river named Duden flows by their place
-          and supplies it.
+          large language ocean. A <br />
+          small river named Duden flows by their place and supplies it.
         </p>
-        <button class="btn benefitsSection__button">Take An Appointment</button>
+        <button class="btn benefits-section__button">
+          Take An Appointment
+        </button>
       </div>
     </section>
 
-    <!-- checkup plans  -->
+    <!-- checkup-plans section  -->
     <section id="checkup-plans" class="checkup-plans">
       <header>
         <div class="checkup-plans__container1">
@@ -314,67 +324,67 @@
         </div>
       </header>
       <div class="checkup-plans__container2 grid">
-        <div class="checkup-plans__content">
+        <div class="checkup-plans__content" data-aos="fade-right">
           <img
             class="checkup-plans__icon"
-            src="images/healthcare.png"
+            src="images/healthcare.svg"
             width="50px"
           />
           <h1 id="checkup-plans__heading2" class="checkup-plans__heading2">
             Women Health Checkup
           </h1>
           <p id="checkup-plans__text2" class="checkup-plans__text2">
-            A wonderful serenity has taken possession of my entire soul, like
-            these sweet mornings of spring.
+            A wonderful serenity has taken possession of my entire soul, <br />
+            like these sweet mornings of spring.
           </p>
           <ul class="checkup-plans__list">
             <li id="list-1-text" class="checkup-plans__listitem">
-              <img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+              <img class="checkup-plans-list__icon" src="images/tick.svg" />
               Complete Blood Count with ESR
             </li>
             <li id="list-2-text" class="checkup-plans__listitem">
-              <img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+              <img class="checkup-plans-list__icon" src="images/tick.svg" />
               Lipid Profile, Live Profile, kidney Profile
             </li>
             <li id="list-3-text" class="checkup-plans__listitem">
-              <img class="checkup-plans-list__icon" src="images/Vector-6.svg" />
+              <img class="checkup-plans-list__icon" src="images/tick.svg" />
               USG Abdomen with Pelvis, Mammography
             </li>
           </ul>
-          <button class="btn benefitsSection__button">
+          <button class="btn benefits-section__button">
             Take An Appointment
           </button>
         </div>
-        <div class="checkup-plans__image">
-          <img src="images/checkup.png" alt="A doctor" />
+        <div class="checkup-plans__image" data-aos="fade-left">
+          <img src="images/checkup.svg" alt="A doctor" />
         </div>
       </div>
     </section>
 
-    <!-- testimonials  -->
+    <!-- testimonials  section -->
     <section id="health-care">
       <div class="grid testimonials">
-        <div class="testimonial__image-container">
+        <div class="testimonial__image-container" data-aos="slide-up">
           <img
             id="testimonial-image"
-            src="images/testimonial.png"
+            src="images/testimonial.svg"
             alt="A happy,smiling patient"
             width="400px"
             height="300px"
           />
         </div>
-        <div class="testimonial__container">
+        <div class="testimonial__container" data-aos="slide-up">
           <div class="testimonials__quotes">
             <img
               class="testimonials__quotes__image"
-              src="images/quotes.png"
+              src="images/quotes.svg"
               width="50px"
               height="50px"
             />
             <div class="testimonials__rating">
               <img
                 class="testimonials__rating__image"
-                src="images/rating.png"
+                src="images/rating.svg"
                 width="100px"
               />
             </div>
@@ -399,9 +409,9 @@
       </div>
     </section>
 
-    <!-- contact  -->
+    <!-- contact section -->
     <section id="contact-page" class="contact-container grid">
-      <div class="contact-container__content">
+      <div class="contact-container__content" data-aos="fade-right">
         <span class="contact-container__tag">APPOINTMENT</span>
         <h3 class="contact-container__heading">
           Get in touch to book <br />
@@ -413,16 +423,16 @@
         </p>
         <div class="contact-container__info">
           <span>
-            <img class="contact-container__image" src="images/vector-7.svg" />
+            <img class="contact-container__image" src="images/email.svg" />
             (123) 456-7890
           </span>
           <span>
-            <img class="contact-container__image" src="images/vector-9.svg" />
+            <img class="contact-container__image" src="images/phone.svg" />
             medico@health.care
           </span>
         </div>
       </div>
-      <div class="contact-container__form">
+      <div class="contact-container__form" data-aos="fade-left">
         <div class="input-group">
           <input type="text" placeholder="Name" class="input" />
         </div>
@@ -443,14 +453,14 @@
       </div>
     </section>
 
-    <!-- footer  -->
+    <!-- footer section -->
     <footer class="footer">
       <div class="container footer-sections">
         <div class="footer-section1">
           <div class="footer-section1__heading">
             <img
               class="footer-section1__icon"
-              src="images/healthcare.png"
+              src="images/healthcare.svg"
               width="20px"
               height="20px"
             />
@@ -462,7 +472,7 @@
               Take An Appointment
             </button>
             <button class="btn--footer">
-              <img src="images/vector-8.svg" width="12px" />
+              <img src="images/whatsapp.svg" width="12px" />
               Connect on Whatsapp
             </button>
           </div>
@@ -497,6 +507,7 @@
           <a href="https://www.facebook.com/algolix/" target="_blank">
             <img class="footer__icon" src="images/facebook.svg" width="20px" />
           </a>
+
           <a href="https://x.com/elonmusk" target="_blank">
             <img class="footer__icon" src="images/twitter.svg" width="20px" />
           </a>
@@ -516,5 +527,9 @@
       </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

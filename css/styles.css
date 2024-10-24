@@ -1,8 +1,7 @@
 @font-face {
   font-family: "Satoshi";
   src: url("../fonts/satoshi/Satoshi-Regular.woff2") format("woff2"),
-    url("../fonts/satoshi/Satoshi-Regular.woff") format("woff"),
-    url("../fonts/satoshi/Satoshi-Regular.ttf") format("truetype");
+    url("../fonts/satoshi/Satoshi-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -10,8 +9,7 @@
 @font-face {
   font-family: "Satoshi";
   src: url("../fonts/satoshi/Satoshi-Bold.woff2") format("woff2"),
-    url("../fonts/satoshi/Satoshi-Bold.woff") format("woff"),
-    url("../fonts/satoshi/Satoshi-Bold.ttf") format("truetype");
+    url("../fonts/satoshi/Satoshi-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -47,18 +45,30 @@ body {
   line-height: 25px;
 }
 
+.topmenu__location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .topmenu__email {
   font-size: 16px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.topmenu img {
+.topmenu > img {
   margin-right: 8px;
   vertical-align: middle;
 }
 
 .topmenu__contact {
   text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -99,7 +109,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 2rem auto;
-  /* added for laptop  */
   padding: 1rem;
   width: 80%;
 }
@@ -133,7 +142,7 @@ body {
 
 .nav__list {
   display: flex;
-  justify-content: center;
+  align-items: center;
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -206,8 +215,8 @@ a {
 
 /* Hero section  */
 .herosection {
-  margin-left: 2rem;
-  padding: 2rem 2rem;
+  margin-left: 3rem;
+  padding: 0 2rem;
 }
 
 .container {
@@ -226,7 +235,7 @@ a {
   left: -60px;
   padding: 10px 10px;
   position: absolute;
-  top: 150px;
+  top: 94px;
   width: 100px;
 }
 
@@ -256,7 +265,6 @@ a {
   font-weight: 700;
   font-size: 35px;
   margin-top: 0;
-  /* added for laptop  */
   margin-bottom: 1.5rem;
 }
 
@@ -272,8 +280,8 @@ a {
 
 @media screen and (min-width: 768px) {
   .herosection {
+    margin-left: 4rem;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 2rem;
     gap: 4rem;
   }
   .herosection__heading {
@@ -298,6 +306,9 @@ a {
     width: 400px;
     height: 400px;
   }
+  .image-text {
+    top: 150px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -315,7 +326,7 @@ a {
 
 /* Categoryservices */
 .catgory-container {
-  padding: 2rem 2rem;
+  padding: 0 3rem;
   margin-left: 2rem;
   margin-top: 3rem;
 }
@@ -328,12 +339,12 @@ a {
 .catgory-container__heading {
   margin: 0;
   font-weight: 700;
-  font-size: 27px;
+  font-size: 34px;
 }
 
 .catgory-container__text {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 15px;
   text-align: justify;
 }
 
@@ -346,14 +357,14 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 192px;
+  width: 170px;
   height: 94px;
-  background: #00a0aa;
+  background: var(--color-primary);
   position: absolute;
-  top: 150px;
+  top: 134px;
   border-radius: 10px;
   left: 23px;
-  padding: 10px;
+  padding: 0 10px;
   color: var(--color-white);
 }
 
@@ -366,19 +377,25 @@ a {
   margin: 0;
   font-size: 25px;
 }
+
+.category__image {
+  width: 246px;
+}
+
 @media screen and (min-width: 768px) {
+  .catgory-container {
+    padding: 2rem 2rem;
+  }
   .categoryservices {
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem 2rem;
   }
-
-  .catgory-container__text {
-    font-weight: 500;
-    font-size: 22px;
-  }
 }
 
 @media screen and (min-width: 1024px) {
+  .catgory-container {
+    margin-left: 4rem;
+  }
   .categoryservices {
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem 0;
@@ -392,6 +409,12 @@ a {
     top: 131px;
     height: 70px;
     padding: 1rem;
+  }
+  .catgory-container__text {
+    font-size: 16px;
+  }
+  .catgory-container__heading {
+    font-size: 36px;
   }
 }
 
@@ -409,10 +432,11 @@ a {
 
 .SpecialityServices__header {
   position: relative;
+  padding-bottom: 50px;
 }
 
 .SpecialityServices__tag {
-  color: #00a0aa;
+  color: var(--color-primary);
   font-size: 16px;
   font-weight: 700;
 }
@@ -435,6 +459,12 @@ a {
   background-color: #fff;
   position: relative;
   padding: 1rem;
+}
+
+.SpecialityServices__btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .SpecialityServices__category__container {
@@ -477,6 +507,13 @@ a {
   .category__content__text {
     font-size: 19px;
   }
+  .SpecialityServices__header {
+    padding-bottom: 0;
+  }
+  .SpecialityServices__btn {
+    left: auto;
+    right: 0;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -488,47 +525,48 @@ a {
   }
 }
 
-/* benefitsSection  */
-.benefitsSection {
+/* benefits-section  */
+.benefits-section {
   padding: 2rem;
   margin-left: 2rem;
 }
 
-.benefitsSection__image img {
+.benefits-section__image img {
   width: 350px;
   height: 350px;
 }
 
-.benefitsSection__container {
+.benefits-section__container {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.benefitsSection__heading {
+.benefits-section__heading {
   font-size: 37px;
   font-weight: 700;
   margin: 0;
 }
 
-.benefitsSection__content {
+.benefits-section__content {
   line-height: 50px;
+  line-height: 46px;
   margin-top: 2rem;
 }
 
-.benefitsSection__listitem {
-  font-size: 20px;
+.benefits-section__listitem {
+  font-size: 16px;
   list-style: none;
   margin-left: 5px;
   display: flex;
   align-items: center;
 }
 
-.benefitsSection__list {
+.benefits-section__list {
   padding-left: 0;
 }
 
-.benefitsSection__icon {
-  background: #00a0aa;
+.benefits-section__icon {
+  background: var(--color-primary);
   width: 10px;
   height: 10px;
   padding: 5px;
@@ -536,50 +574,50 @@ a {
   margin-right: 10px;
 }
 
-.benefitsSection__text {
-  font-size: 20px;
+.benefits-section__text {
+  font-size: 16px;
   font-weight: 500;
 }
 
-.benefitsSection__button {
-  font-size: 20px;
-  width: 240px;
-  height: 55px;
+.benefits-section__button {
+  font-size: 16px;
+  width: 200px;
+  height: 45px;
   margin: 0;
   margin-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {
-  .benefitsSection__container {
+  .benefits-section__container {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
-  .benefitsSection__image img {
+  .benefits-section__image img {
     width: 350px;
     height: 350px;
   }
-  .benefitsSection__content {
+  .benefits-section__content {
     margin-top: 0;
   }
-  .benefitsSection__heading {
+  .benefits-section__heading {
     font-size: 30px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .benefitsSection__container {
+  .benefits-section__container {
     gap: 10rem;
   }
-  .benefitsSection__image img {
+  .benefits-section__image img {
     width: 400px;
     height: 400px;
   }
 }
-/* checkup-plans */
 
+/* checkup-plans */
 .checkup-plans {
-  /* padding: 2rem; */
   margin-left: 2rem;
+  margin-top: 4rem;
 }
 .checkup-plans__container1 {
   display: flex;
@@ -595,7 +633,8 @@ a {
 }
 
 .checkup-plans__text {
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 16px;
   font-weight: 500;
   text-align: center;
 }
@@ -629,7 +668,7 @@ a {
 }
 
 .checkup-plans__icon {
-  background: #00a0aa;
+  background: var(--color-primary);
   padding: 6px;
   border-radius: 50px;
 }
@@ -648,7 +687,7 @@ a {
 }
 
 .checkup-plans-list__icon {
-  background: #000;
+  background: var(--color-black);
   width: 10px;
   height: 10px;
   padding: 5px;
@@ -664,12 +703,12 @@ a {
 
 .checkup-plans__text2 {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
 .checkup-plans__listitem {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
 }
 
@@ -692,24 +731,19 @@ a {
   }
 }
 
-.block {
-  --padding-vertical: 6rem;
-  padding: var(--padding-vertical) 2rem;
-}
-
 /* Contact us section  */
 .contact-container {
-  /* padding: 4rem;
-  gap: 10px; */
-  /* margin-top: 19rem; */
+  margin-left: 3rem;
+  gap: 5rem;
 }
+
 .contact-container__content {
-  padding: 5rem;
+  margin-top: 3rem;
 }
 
 .contact-container__heading {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 45px;
   margin: 0;
 }
@@ -722,7 +756,7 @@ a {
 
 .contact-container__text {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 27px;
 }
 
@@ -733,17 +767,19 @@ a {
   margin-right: 10px;
   width: 15px;
 }
+
 .contact-container__info {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
 }
+
 .contact-container__info span {
   display: flex;
   align-items: center;
   margin-top: 1rem;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .contact-container__form {
@@ -752,7 +788,6 @@ a {
   background: #fff;
   border-radius: 20px;
   padding: 1.5rem;
-  margin-left: 3rem;
 }
 
 /* Form  */
@@ -788,8 +823,9 @@ a {
 .form-btn {
   width: 280px;
   height: 47px;
-  border-radius: 0;
+  border-radius: 5px;
   margin-left: 1rem;
+  font-size: 16px;
 }
 
 ::placeholder {
@@ -799,7 +835,7 @@ a {
 @media screen and (min-width: 768px) {
   .contact-container {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 0;
+    margin-top: 4rem;
   }
   .contact-container__form {
     width: 300px;
@@ -813,7 +849,6 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
- 
   .contact-container__form {
     width: 350px;
   }
@@ -822,6 +857,10 @@ a {
   }
   .input--message {
     width: 285px;
+  }
+  .form-btn {
+    width: 332px;
+    height: 42px;
   }
 }
 
@@ -880,7 +919,7 @@ a {
   height: 50px;
   border-radius: 50%;
   border: 2px solid black;
-  background-color: #fff;
+  background-color: var(--color-white);
   color: black;
   font-size: 24px;
   font-weight: bold;
@@ -918,6 +957,12 @@ a {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .testimonial__container__text {
+    font-size: 27px;
+  }
+}
+
 /* footer  */
 .footer {
   background: var(--color-primary);
@@ -939,7 +984,7 @@ a {
 .footer-section1__heading {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .footer-section1__icon {
@@ -953,13 +998,13 @@ a {
 }
 
 .btn--footer {
-  border: 1px solid #fff;
+  border: 1px solid var(--color-white);
   border-radius: 10px;
   padding: 10px;
   width: 200px;
   height: 56px;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
 }
 
 .footer__buttton-container button {
@@ -970,7 +1015,7 @@ a {
   display: flex;
   flex-direction: column;
   margin: 0;
-  color: #fff;
+  color: var(--color-white);
   list-style: none;
   padding: 0 2rem;
   white-space: nowrap;
@@ -1012,7 +1057,7 @@ a {
 /* header form  */
 .form-container {
   display: none;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 10px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -1028,7 +1073,7 @@ a {
 }
 
 #appointment-btn {
-  color: white;
+  color: var(--color-white);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -1040,14 +1085,14 @@ a {
   right: 10px;
   background: var(--color-primary);
   border: none;
-  color: #fff;
+  color: var(--color-white);
   cursor: pointer;
   font-size: 16px;
   margin-bottom: 10px;
   margin-right: 12px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .form-container {
     width: 360px;
   }
